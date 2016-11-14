@@ -6,5 +6,5 @@ package com.paranyak.order;
 public class CreditCardPaymentStrategy implements IPayment {
     @Override
     public void pay(double price) {
-        System.out.println("Credit Card Payment Strategy");    }
+        System.out.println("Credit Card Payment Strategy" + ", price: " + price);    }
 }

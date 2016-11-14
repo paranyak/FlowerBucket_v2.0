@@ -22,6 +22,9 @@ public class FlowerMain {
         fb.addFlower(f1);
         fb.addFlower(f2);
         myOrder.addItem(fb);
+        System.out.println("Type of delivery and payment:");
         myOrder.proccessOrder();
+        System.out.println("Total price: ");
+        System.out.println(myOrder.calculateTotalPrice());
     }
 }
