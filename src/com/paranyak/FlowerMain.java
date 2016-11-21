@@ -16,9 +16,9 @@ public class FlowerMain {
         myOrder.setDeliveryStrategy(new PostDeliveryStrategy());
         myOrder.setPaymentStrategy(new PayPaIPaymentStrategy());
         FlowerBucket fb = new FlowerBucket();
-        FlowerSpec spec = new FlowerSpec(11);
+        FlowerSpec spec = new FlowerSpec(11, "Cactus");
         Flower f1 = new Flower(spec);
-        Flower f2 = new Flower(new FlowerSpec(100.0));
+        Flower f2 = new Flower(new FlowerSpec(100.0, "Cactus"));
         fb.addFlower(f1);
         fb.addFlower(f2);
         myOrder.addItem(fb);

@@ -13,12 +13,14 @@ public class Flower {
         return spec.getPrice();
     }
 
+    public String getType() {return  spec.getType();}
+
     public FlowerSpec getSpec(){
         return spec;
     }
 
     public String toString() {
-        return ", Price:  " + String.valueOf(getPrice());
+        return ", Price:  " + String.valueOf(getPrice()) + " type" + getType();
     }
 
 }

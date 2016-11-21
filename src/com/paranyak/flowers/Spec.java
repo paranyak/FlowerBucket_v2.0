@@ -8,6 +8,16 @@ public class Spec {
 
     protected double price;
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    protected String type;
+
     public Spec(double price) {
         this.price = price;
     }

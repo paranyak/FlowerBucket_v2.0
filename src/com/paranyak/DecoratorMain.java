@@ -12,9 +12,9 @@ public class DecoratorMain {
     public static void main(String args[]) {
         System.out.println("Creating new bucket...");
         FlowerBucket fb = new FlowerBucket();
-        FlowerSpec spec = new FlowerSpec(11);
+        FlowerSpec spec = new FlowerSpec(11, "Cactus");
         Flower f1 = new Flower(spec);
-        Flower f2 = new Flower(new FlowerSpec(100.0));
+        Flower f2 = new Flower(new FlowerSpec(100.0, "Cactus"));
         fb.addFlower(f1);
         fb.addFlower(f2);
         System.out.println("Adding new flowers...");
