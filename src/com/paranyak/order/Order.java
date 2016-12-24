@@ -18,6 +18,10 @@ public class Order extends Observable{
         items = new LinkedList<>();
         //observers = new LinkedList<>();
     };
+
+    /**
+     * get strategy of payment and delivery, notify observers
+     */
     public void proccessOrder(){
         getDeliveryStrategy().deliver(items);
         getPaymentStrategy().pay(calculateTotalPrice());
@@ -39,6 +43,10 @@ public class Order extends Observable{
         return this.payment;
     }
 
+    /**
+     * calculate total price of all flowers
+     * @return total price
+     */
     public double calculateTotalPrice() {
         double totalP = 0.0;
         for (int i = 0; i < items.size(); i++) {
@@ -47,10 +55,18 @@ public class Order extends Observable{
         return totalP;
     }
 
+    /**
+     * add flower to bucket
+     * @param itm flower
+     */
     public void addItem(Item itm) {
         items.add((FlowerBucket) itm);
     }
 
+    /**
+     * remove flower from bucket
+     * @param itm flower
+     */
     public void removeItem(Item itm) {
         items.remove(itm);
     }

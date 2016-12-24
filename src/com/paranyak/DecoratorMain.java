@@ -2,6 +2,7 @@ package com.paranyak;
 
 import com.paranyak.flowers.Flower;
 import com.paranyak.flowers.FlowerBucket;
+import com.paranyak.flowers.FlowerColor;
 import com.paranyak.flowers.FlowerSpec;
 import com.paranyak.order.FlowerBucketDecorator;
 
@@ -12,9 +13,9 @@ public class DecoratorMain {
     public static void main(String args[]) {
         System.out.println("Creating new bucket...");
         FlowerBucket fb = new FlowerBucket();
-        FlowerSpec spec = new FlowerSpec(11, "Cactus");
+        FlowerSpec spec = new FlowerSpec(11, FlowerColor.PINK,"Cactus");
         Flower f1 = new Flower(spec);
-        Flower f2 = new Flower(new FlowerSpec(100.0, "Cactus"));
+        Flower f2 = new Flower(new FlowerSpec(100.0, FlowerColor.GREEN, "Cactus"));
         fb.addFlower(f1);
         fb.addFlower(f2);
         System.out.println("Adding new flowers...");
